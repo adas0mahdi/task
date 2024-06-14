@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="min-h-screen flex flex-col roboto-regular">
+        <div class="flex justify-center">
+            <header class="bg-white shadow-md rounded-full box-with mt-6">
+                <div class="container mx-auto flex justify-between items-center px-6 py-2">
+                    <img src="./assets/img/logo.png" alt="Zanrly" class="w-16">
+                    <nav id="menu" class="fixed inset-y-0 left-0 z-30 w-64 bg-white shadow-lg transform transition-transform duration-300 -translate-x-full md:static md:w-auto md:shadow-none md:transform-none md:flex md:items-center md:space-x-6">
+                        <div class="flex justify-between items-center p-4 md:hidden">
+                            <h2 class="text-lg font-semibold text-gray-800">Menu</h2>
+                            <button id="menuToggle" class="text-gray-800 hover:text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:text-blue-600">Features</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:text-blue-600">Solutions</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:text-blue-600">Resources</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:text-blue-600">Pricing</a>
+                    </nav>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <button class="text-gray-800 hover:text-blue-600">Log In</button>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Get Started</button>
+                    </div>
+                    <button id="menuToggleMain" class="block md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+        </div>
+
+        <main class="flex-1">
+            <section class="container mx-auto p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <div class="md:col-span-6 md:col-start-1">
+                    <p class="text-blue-600 font-semibold roboto-regular">Best Caption Here</p>
+                    <h1 class="font-bold mt-2 roboto-regular text-5xl">Build online business from home.</h1>
+                    <p class="text-gray-600 mt-4 roboto-light">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
+                    <div class="mt-6 flex space-x-4">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 roboto-regular">Get Started</button>
+                        <button class="border border-blue-600 text-blue-600 px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white roboto-regular">Watch Video</button>
+                    </div>
+                </div>
+                <div class="md:col-span-6 md:col-start-10 flex justify-center">
+                    <img src="../assets/img/one.png" alt="Smiling woman" class="rounded-md">
+                </div>
+            </section>
+            
+            <section class="container w-full mx-auto p-6">
+                <div id="reviewsContainer" class="flex space-x-4 overflow-x-auto  second-box">
+                    <!-- Reviews will be inserted here by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
